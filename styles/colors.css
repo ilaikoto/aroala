@@ -1,0 +1,79 @@
+/* ============================================
+   AROALA — Color System
+   ============================================ */
+
+:root {
+  /* Brand Palette */
+  --color-primary:   #073C25;
+  --color-secondary: #2EB167;
+  --color-white:     #FFFFFF;
+
+  /* Light Mode (default) */
+  --bg:              #FFFFFF;
+  --bg-subtle:       #F4F9F6;
+  --bg-card:         #FFFFFF;
+  --bg-card-hover:   #EEF7F2;
+  --surface:         #E8F5EE;
+  --surface-strong:  #C8E8D4;
+
+  --text-primary:    #073C25;
+  --text-secondary:  #2D6048;
+  --text-muted:      #5A8070;
+  --text-inverse:    #FFFFFF;
+
+  --accent:          #2EB167;
+  --accent-hover:    #259A58;
+  --accent-muted:    rgba(46, 177, 103, 0.12);
+  --accent-glow:     rgba(46, 177, 103, 0.25);
+
+  --border:          rgba(7, 60, 37, 0.10);
+  --border-strong:   rgba(7, 60, 37, 0.20);
+
+  --shadow-sm:       0 2px 8px rgba(7, 60, 37, 0.08);
+  --shadow-md:       0 8px 32px rgba(7, 60, 37, 0.12);
+  --shadow-lg:       0 24px 64px rgba(7, 60, 37, 0.16);
+
+  --header-bg:       rgba(255, 255, 255, 0.90);
+  --hero-text:       #073C25;
+
+  --stat-bg:         #073C25;
+  --stat-text:       #FFFFFF;
+
+  --toggle-track:    rgba(7, 60, 37, 0.12);
+  --toggle-thumb:    #073C25;
+}
+
+[data-theme="dark"] {
+  --bg:              #073C25;
+  --bg-subtle:       #05301D;
+  --bg-card:         #0A4A2D;
+  --bg-card-hover:   #0D5534;
+  --surface:         #0F5E38;
+  --surface-strong:  #166B42;
+
+  --text-primary:    #FFFFFF;
+  --text-secondary:  #A8D8BE;
+  --text-muted:      #70A889;
+  --text-inverse:    #073C25;
+
+  --accent:          #2EB167;
+  --accent-hover:    #3CC876;
+  --accent-muted:    rgba(46, 177, 103, 0.15);
+  --accent-glow:     rgba(46, 177, 103, 0.30);
+
+  --border:          rgba(255, 255, 255, 0.08);
+  --border-strong:   rgba(255, 255, 255, 0.16);
+
+  --shadow-sm:       0 2px 8px rgba(0, 0, 0, 0.20);
+  --shadow-md:       0 8px 32px rgba(0, 0, 0, 0.30);
+  --shadow-lg:       0 24px 64px rgba(0, 0, 0, 0.40);
+
+  --header-bg:       rgba(7, 60, 37, 0.92);
+  --hero-text:       #FFFFFF;
+
+  --stat-bg:         rgba(255,255,255,0.08);
+  --stat-text:       #FFFFFF;
+
+  --toggle-track:    rgba(46, 177, 103, 0.25);
+  --toggle-thumb:    #2EB167;
+}

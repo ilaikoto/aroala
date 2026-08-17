@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AROALA — Surveiller. Alerter. Protéger. Madagascar</title>
+  <meta name="description" content="Application mobile d'alerte intelligente et de coordination contre la déforestation et les feux de brousse — Madagascar. Un projet ILAIKOTO SARLU pour POESAM 2026." />
+  <meta name="theme-color" content="#073C25" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/app-icon-light.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/svg+xml" href="assets/app-icon-dark.svg" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════ -->
+<header id="header">
+  <div class="container header-inner">
+
+    <div class="header-logo">
+      <!-- 
+        LOGO PLACEHOLDER
+        Replace assets/logo-light.svg and assets/logo-dark.svg
+        with your actual SVG files. The JS will swap them on theme toggle.
+      -->
+      <div class="logo-svg-placeholder">
+        <img class="app-icon-themed header-app-icon" src="assets/app-icon-light.svg" alt="AROALA icon" />
+        <img id="logo-img" src="assets/logo-light.svg" style="height:30px;width:auto;" alt="AROALA" />
+        <span id="logo-fallback" class="logo-text-fallback" style="display:none">AROALA</span>
+      </div>
+    </div>
+
+    <nav id="main-nav" aria-label="Navigation principale">
+      <!-- Rendered by JS -->
+    </nav>
+
+    <div class="header-actions">
+      <!-- Language Toggle -->
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">
+        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <!-- Mobile nav toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="0" y1="2" x2="22" y2="2"/>
+          <line x1="0" y1="8" x2="22" y2="8"/>
+          <line x1="0" y1="14" x2="22" y2="14"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles"></div>
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span id="hero-badge-text"></span>
+        </div>
+        <h1 class="hero-title" id="hero-title"></h1>
+        <p class="hero-desc" id="hero-subtitle"></p>
+        <div class="hero-cta">
+          <a href="#solution" class="btn-primary" id="hero-cta-primary"></a>
+          <a href="#cta" class="btn-secondary" id="hero-cta-secondary"></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Floating indicator cards -->
+        <!-- <div class="float-card float-card-2">
+          <span class="float-icon">🛰️</span>
+          <div class="float-text-block">
+            <span class="float-val">NASA FIRMS</span>
+            <span class="float-sub">Données satellite</span>
+          </div>
+        </div> -->
+
+        <!-- App mockup -->
+        <div class="app-mockup">
+          <div class="mockup-notch">
+            <div class="notch-camera"></div>
+            <div class="notch-speaker"></div>
+          </div>
+          <div class="mockup-screen">
+            <div class="mockup-header-bar">
+              <div class="mockup-logo-area">
+                <!-- 
+                  APP ICON PLACEHOLDER
+                  Replace assets/app-icon.svg with your actual app logo/icon
+                -->
+                <div class="mockup-app-icon">
+                  <img src="assets/app-icon.svg" alt="AROALA icon" style="width:28px;height:28px;border-radius:8px;object-fit:cover;" 
+                    onerror="this.style.display='none';this.parentElement.innerHTML='<svg width=\'16\' height=\'16\' viewBox=\'0 0 16 16\' fill=\'white\'><circle cx=\'8\' cy=\'8\' r=\'6\' stroke=\'white\' stroke-width=\'2\' fill=\'none\'/><line x1=\'8\' y1=\'4\' x2=\'8\' y2=\'8\' stroke=\'white\' stroke-width=\'2\'/><line x1=\'8\' y1=\'8\' x2=\'11\' y2=\'11\' stroke=\'white\' stroke-width=\'2\'/></svg>';">
+                </div>
+                <span class="app-name-small">AROALA</span>
+              </div>
+              <span class="alert-badge">● LIVE</span>
+            </div>
+            <!-- Simplified map -->
+            <div class="mockup-map">
+              <div class="map-pin" style="top:30%;left:40%"></div>
+              <div class="map-pin" style="top:60%;left:65%"></div>
+              <div class="map-fire" style="top:22%;left:55%">🔥</div>
+              <div class="map-fire" style="top:50%;left:28%">🔥</div>
+            </div>
+            <!-- Alert card -->
+            <div class="mockup-alert-card">
+              <span class="alert-icon">🚨</span>
+              <div class="alert-text-block">
+                <span class="alert-title">ALERTE FEU DÉTECTÉ</span>
+                <span class="alert-sub">Ankarafantsika · il y a 12s</span>
+              </div>
+            </div>
+            <!-- Stats row -->
+            <div class="mockup-stat-row">
+              <div class="stat-mini">
+                <span class="stat-mini-val">42s</span>
+                <span class="stat-mini-label">Délai alerte</span>
+              </div>
+              <div class="stat-mini">
+                <span class="stat-mini-val">7</span>
+                <span class="stat-mini-label">Auth. notifiées</span>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="mockup-action-row">
+              <button class="mockup-btn">Coordonner</button>
+              <button class="mockup-btn secondary">Carte</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="float-card float-card-1">
+          <span class="float-icon">🌿</span>
+          <div class="float-text-block">
+            <span class="float-val">+$35/tCO₂</span>
+            <span class="float-sub">Crédit carbone</span>
+          </div>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STATS BAR
+═══════════════════════════════════════════ -->
+<div id="stats-bar">
+  <div class="container">
+    <div class="stats-grid" id="stats-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PROBLEM
+═══════════════════════════════════════════ -->
+<section id="problem">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="problem-label"></span>
+      <h2 id="problem-title"></h2>
+      <p id="problem-subtitle"></p>
+    </div>
+    <div class="problem-grid" id="problem-cards">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     SOLUTION
+═══════════════════════════════════════════ -->
+<section id="solution">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="solution-label"></span>
+      <h2 id="solution-title"></h2>
+      <p id="solution-subtitle"></p>
+    </div>
+    <div class="phase-list" id="solution-phases">
+      <!-- Rendered by JS -->
+    </div>
+    <!-- <h3 style="margin-top:3rem;margin-bottom:0.5rem;" id="solution-table-title"></h3>
+    <table class="feature-table" id="solution-table">
+      
+    </table> -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     IMPACT
+═══════════════════════════════════════════ -->
+<section id="impact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="impact-label"></span>
+      <h2 id="impact-title"></h2>
+    </div>
+    <div class="impact-cards">
+      <div class="impact-card featured reveal" id="impact-featured">
+
+      </div>
+      <div id="impact-cards" style="display:contents">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     MARKET
+═══════════════════════════════════════════ -->
+<section id="market">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="market-label"></span>
+      <h2 id="market-title"></h2>
+      <p id="market-subtitle"></p>
+    </div>
+    <div class="market-cards" id="market-cards">
+      
+    </div>
+    <!-- <h3 style="margin-top:3rem;margin-bottom:0.5rem;" id="market-table-title"></h3>
+    <table class="revenue-table" id="market-table">
+      
+    </table> -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PARTNERS
+═══════════════════════════════════════════ -->
+<section id="partners">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="partners-label"></span>
+      <h2 id="partners-title"></h2>
+    </div>
+    <div class="partners-grid" id="partners-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TEAM
+═══════════════════════════════════════════ -->
+<section id="team">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="team-label"></span>
+      <h2 id="team-title"></h2>
+      <p id="team-subtitle"></p>
+    </div>
+    <div class="team-grid" id="team-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     ROADMAP
+═══════════════════════════════════════════ -->
+<section id="roadmap">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label" id="roadmap-label"></span>
+      <h2 id="roadmap-title"></h2>
+    </div>
+    <div class="roadmap-timeline" id="roadmap-timeline">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CTA
+═══════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container">
+    <h2 id="cta-title"></h2>
+    <p id="cta-subtitle"></p>
+    <div class="cta-btns">
+      <a href="mailto:hatixntsoa@proton.me" class="btn-white" id="cta-btn-contact"></a>
+      <a href="#" class="btn-outline-white" id="cta-btn-deck" download></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div style="margin-bottom:0.75rem">
+          <img id="footer-logo-img" src="assets/logo-light.svg" alt="AROALA" style="height:30px;width:auto;">
+        </div>
+        <p id="footer-tagline"></p>
+        <p style="margin-top:0.5rem;font-size:0.78rem;font-family:'DM Mono',monospace;color:var(--text-muted)">
+          ILAIKOTO SARLU
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 id="footer-links-nav-label"></h4>
+        <ul class="footer-links" id="footer-nav-links">
+          <!-- Rendered by JS -->
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 id="footer-links-contact-label"></h4>
+        <ul class="footer-links" id="footer-contact-links">
+          <!-- Rendered by JS -->
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span id="footer-copyright"></span>
+      <div class="footer-bottom-links" id="footer-legal">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts/page.js"></script>
+</body>
+</html>
