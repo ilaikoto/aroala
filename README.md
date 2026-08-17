@@ -1,7 +1,7 @@
-# 🌱 AROALA - Orange Poesam Competition 2026
+# 🌱 AROALA - Green Project Innovation Competition 2026
 
 <p align="center">
- <img height="350" src="https://raw.githubusercontent.com/hatixntsoa/aroala/main/assets/aroala.squircle.svg"/>
+ <img height="350" src="https://raw.githubusercontent.com/ilaikoto/aroala/main/assets/aroala.squircle.svg"/>
 </p>
 
 
@@ -9,6 +9,6 @@
 
 <p>
 
-`AROALA` is a Environmental Project developed for the Poesam Entrepreneurship Competition - 2026 Edition.
+`AROALA` is a Environmental Project developed for the Green Project Innovation Entrepreneurship Competition - 2026 Edition.
 
 </p>
